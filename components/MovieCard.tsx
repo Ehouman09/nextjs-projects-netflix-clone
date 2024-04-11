@@ -1,5 +1,7 @@
 import React from 'react';
 import { BsFillPlayFill } from 'react-icons/bs';
+import FavoriteButton from './FavoriteButton';
+import { useRouter } from 'next/router';
 
 interface MovieCardPropos {
     data: Record<string, any>
@@ -7,6 +9,7 @@ interface MovieCardPropos {
 
 const MovieCard: React.FC<MovieCardPropos> = ({ data }) => {
 
+    const router = useRouter();
 
   return (
     <div className="
@@ -92,12 +95,15 @@ const MovieCard: React.FC<MovieCardPropos> = ({ data }) => {
 
                             
                         "
-                        onClick={ () => {} }
+                        onClick={ () => router.push(`/watch/${data?.id}`) }
                     >
 
                         <BsFillPlayFill size={30} />
 
                     </div>
+
+                    <FavoriteButton movieId={data?.id} />
+
                 </div>
 
                 <p className='text-green-400 font-semibold mt-4'> New <span className='text-white'> 2023 </span> </p>
