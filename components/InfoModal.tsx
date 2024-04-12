@@ -88,6 +88,7 @@ const InfoModal: React.FC<InfoModalProps> = ({visible, onClose}) => {
                         className="
                             cursor-pointer
                             absolute
+                            p-3
                             top-3
                             right-3
                             h-10
@@ -101,7 +102,7 @@ const InfoModal: React.FC<InfoModalProps> = ({visible, onClose}) => {
                         "
                         onClick={ handleClose }
                         >
-                            <AiOutlineClose size={20} className='text-white '/>
+                            <AiOutlineClose size={25} className='text-white'/>
                         </div>
                         <div className="
                             absolute
