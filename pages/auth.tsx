@@ -27,7 +27,8 @@ const Auth = () => {
             await signIn('credentials', {
                 email,
                 password,
-                callbackUrl: '/profile'
+                //callbackUrl: '/profile'
+                callbackUrl: '/'
             });
             
         } catch (error) {
@@ -124,7 +125,7 @@ const Auth = () => {
                             </div>
 
                             <div 
-                            onClick={ () => signIn('github', { callbackUrl: '/profile' }) } 
+                            onClick={ () => signIn('github', { callbackUrl: '/' }) } 
                             className="
                             w-10
                             h-10
